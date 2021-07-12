@@ -1,3 +1,3 @@
-import random
-def fun():
-    print()
+import random 
+def fun(arg):
+    print(arg)
