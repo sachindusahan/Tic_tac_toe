@@ -1,5 +1,5 @@
 
-
+# demo function
 def demo(
     r1c1, r1c2, r1c3,
     r2c1, r2c2, r2c3,
@@ -27,5 +27,8 @@ def demo(
             print("-----")
 
 
-demo(1, 2, 3, 4, 5, 6, 7, 8, 9)
-
+demo("X", "X", "O", "X", "O", "X", "X", "X", "O")
+# play
+condition = True
+while condition:
+    user_input = input("X or O: -> ")
