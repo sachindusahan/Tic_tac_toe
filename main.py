@@ -1,3 +1,4 @@
+
 def demo(
         r1c1, r1c2, r1c3,
         r2c1, r2c2, r2c3,
@@ -9,16 +10,9 @@ def demo(
     demo3 = [my_list[6], "|", my_list[7], "|", my_list[8]]
 
     var = demo1
-    for i in range(3):
-        if i == 0:
-            var = demo1
-        elif i == 1:
-            var = demo2
-        else:
-            var = demo3
-        for j in var:
-            print(j, end="")
-        print()
-        if i != 2:
-            print("------")
+
+
+
 demo(1,2,3,4,5,6,7,8,9)
+
+demo()
