@@ -26,9 +26,21 @@ def demo(
         if i != 2:
             print("-----")
 
+empty = " "
+demo(empty, "X", empty, "X", empty, "X", "X", "X", "O")
 
-demo("X", "X", "O", "X", "O", "X", "X", "X", "O")
-# play
+
+
 condition = True
 while condition:
     user_input = input("X or O: -> ")
+    com = ""
+    if user_input.lower() == "x":
+        user_input = "X"
+        com = "O"
+    elif user_input.lower() =="o":
+        user_input = "O"
+        com = "X"
+    else:
+        continue
+
