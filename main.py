@@ -1,5 +1,8 @@
-
+from play import user
+from os import system
 # demo function
+
+
 def demo(
     r1c1, r1c2, r1c3,
     r2c1, r2c2, r2c3,
@@ -26,9 +29,9 @@ def demo(
         if i != 2:
             print("-----")
 
-empty = " "
-demo(empty, "X", empty, "X", empty, "X", "X", "X", "O")
 
+empt = " "
+checks = [empt, empt, empt, empt, empt, empt, empt, empt, empt]
 
 
 condition = True
@@ -38,9 +41,21 @@ while condition:
     if user_input.lower() == "x":
         user_input = "X"
         com = "O"
-    elif user_input.lower() =="o":
+        # run code ->
+        while True:
+            system("clear")
+            demo(checks[0], checks[1], checks[2], checks[3],
+                 checks[4], checks[5], checks[6], checks[7], checks[8])
+            print("enter your index > 1 > n")
+            position = int(input("index: > "))
+
+            if 8 >= position >= 0:
+                checks[position] = "X"
+
+                # < -
+    elif user_input.lower() == "o":
         user_input = "O"
         com = "X"
+
     else:
         continue
-
