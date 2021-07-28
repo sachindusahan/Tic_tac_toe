@@ -15,3 +15,7 @@ def checking(arg1, arg2):
 
 
 print(checking(checks, selected))
+def fun():
+	return None
+
+import random
