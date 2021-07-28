@@ -18,3 +18,7 @@ print(checking(checks, selected))
 
 def func():
     print("hello world")
+    
+    return None
+
+    print()
