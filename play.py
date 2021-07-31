@@ -1,3 +1,5 @@
+import random
+
 empt = " "
 checks = [empt, empt, empt, empt, empt, empt, empt, empt, empt]
 not_selected = [1, 2, 3, 5, 6, 7, 9]
@@ -17,21 +19,24 @@ lines = [
 
 
 def checking(arg1, arg2, arg3, arg4):
-    # arg1 = all places
-    # arg2 = not_selected
+    # arg1 = checks
+    # arg2 = available
     # arg3 = user input
     # arg4 = com
-    index = 1
+
+
     for line in lines:
-        for i in line:
-            if arg1[i] == arg3:
-                index += 1
+        count1 = 0
+        count2 = 0
+        empty = 0
+        for i in range(3):
+            if arg1[line[i]] == arg3:
+                count1 += 1
+            if arg1[line[i]] == empt:
+                empty += 1
+                x = line[i]
 
-        if index == 2:
-            return_value = line.index(empt)
-            return return_value
-        else:
-            for no in arg2:
-                return no
+        if count1 ==2 and empty == 1:
+            return x
 
-
+    return arg1.index(empt)

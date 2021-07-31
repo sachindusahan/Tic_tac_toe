@@ -42,35 +42,30 @@ while condition:
         user_input = "X"
         com = "O"
         # run code ->
-        not_selected = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        available = [0, 1, 2, 3, 4, 5, 6, 7, 8]
         while True:
             # system("clear")
 
             demo(checks[0], checks[1], checks[2], checks[3],
                  checks[4], checks[5], checks[6], checks[7], checks[8])
 
-            for num in not_selected:
-                print(num, end=" > ")
 
             try:
-                position = int(input("index: > "))
+                for avb in available:
+                    print(avb, end='|')
+                point = int(input(" Index-> "))
+                if point in available:
+                    available.remove(point)
+                    checks[point] = "X"
 
-                if position in not_selected:
-                    del not_selected[position-1]  # remove selected value
-                    checks[position-1] = "X"
-                    # code
-                    # computer value
-                    checks[checking(checks, not_selected,
-                                    user_input, com) - 1] = "O"
+                    available.remove(checking(checks, available, user_input, com))
+                    checks[checking(checks, available, user_input, com)] = "O"
+
                 else:
-                    print("Already used")
+                    print("Already used!")
 
-                    # end code
             except ValueError:
-                print("Please enter a valid index!")
-            except IndexError:
-                print("Index error")
-
+                print("Invalid!")
         # < -
     elif user_input.lower() == "o":
         user_input = "O"
