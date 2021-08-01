@@ -1,5 +1,6 @@
 from play import checking
 from os import system
+import result
 # demo function
 
 

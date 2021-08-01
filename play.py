@@ -17,7 +17,6 @@ lines = [
     [2, 4, 6]
 ]
 
-
 def checking(arg1, arg2, arg3, arg4):
     # arg1 = checks
     # arg2 = available
@@ -32,11 +31,16 @@ def checking(arg1, arg2, arg3, arg4):
         for i in range(3):
             if arg1[line[i]] == arg3:
                 count1 += 1
+             
             if arg1[line[i]] == empt:
                 empty += 1
                 x = line[i]
 
-        if count1 ==2 and empty == 1:
+            if arg1[line[i]] == arg4:
+                count2 += 1
+
+        if count1 == 2 or count2 == 2 and empty == 1:
             return x
 
     return arg1.index(empt)
+
